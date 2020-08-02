@@ -1,0 +1,70 @@
+.Modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 30rem;
+    height: 20rem;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+}
+
+.modal-message{
+    margin-bottom: 5rem;
+    font-size: 1.3rem;
+}
+
+.Modal button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    width: 4rem;
+    height: 3rem;
+    margin: 1rem;
+    opacity: 0.7;
+    font-size: 1rem;
+}
+
+.Modal button:hover {
+    opacity: 1; 
+}
+
+.btns{
+    display: flex;
+}
+
+.btn-yes{
+    background-color: #00c49a;
+}
+
+.btn-no{
+    background-color: #f24236;
+}
+
+.modal-enter {
+    opacity: 0;
+    transform: translate(50%,100%);
+}
+
+.modal-enter-active {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.modal-exit {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.modal-exit-active {
+    opacity: 0;
+    transform: translate(50%,100%);
+    transition: opacity 300ms, transform 300ms;
+}

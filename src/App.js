@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { NoteProvider } from './NoteContext';
+import { CSSTransition } from 'react-transition-group';
+import NoteList from './components/NoteList';
+import Nav from './components/Nav';
+import AddNote from './components/AddNote';
+import './css/App.css';
+
 
 function App() {
+
+  const [showAdd, setShowAdd] = useState(true);
+  const [showBtn, setShowBtn] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <NoteProvider>
+      <div className="App">
+        <Nav />
+        <div className="content">
+          {showBtn && <button className="add-btn-main" onClick={() => setShowAdd(true)}>
+            <i className="fas fa-plus"></i>
+          </button>}
+          <CSSTransition
+            in={showAdd}
+            timeout={300}
+            classNames="add"
+            unmountOnExit
+            onEnter={() => setShowBtn(false)}
+            onExited={() => setShowBtn(true)}>
+            <AddNote onClose={() => setShowAdd(false)} />
+          </CSSTransition>
+          <NoteList />
+        </div>
+      </div>
+    </NoteProvider>
+  )
 }
 
 export default App;

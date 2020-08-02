@@ -1,0 +1,130 @@
+.note{
+    display: flex;
+    margin: 0.5rem;
+    flex-direction: column;
+    padding: 2rem 1.7rem;
+    min-width: 75%;
+    min-height: 8rem;
+    border-radius: 14px;
+    position: relative;
+    animation: noteAppear 0.3s ease-in;
+}
+
+@keyframes noteAppear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.delete-icon{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.9rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.move-icon-right{
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.9rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.move-icon-left{
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.9rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.note:hover .delete-icon{
+    visibility: visible;
+}
+.note:hover .move-icon-right{
+    visibility: visible;
+}
+.note:hover .move-icon-left{
+    visibility: visible;
+}
+
+.delete-icon:hover{
+color: #000000ca;
+}
+
+.move-icon:hover{
+color: #000000ca;
+}
+
+.yellow{
+    background-color: #f8e16c;
+}
+
+.green{
+    background-color: #00c49a;
+}
+
+.red{
+    background-color: #f24236;
+}
+
+.note-task{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.editable {
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 85%;
+}
+
+.edit-value{
+cursor: pointer;
+}
+
+.edit-icon{
+    font-size: 0.8rem;
+    padding-left: 0.3rem;
+    position: absolute;
+    visibility: hidden;
+}
+
+.edit-value:hover ~ .edit-icon{
+    visibility: visible;
+}
+
+@media screen and (max-width: 635px) {
+    .note{
+        min-width: 60%;
+    }
+
+    .note-task{
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .delete-icon {
+        visibility: visible;
+    }
+    .move-icon-right {
+        visibility: visible;
+    }
+    .move-icon-left {
+        visibility: visible;
+    }
+}

@@ -1,0 +1,22 @@
+.Nav{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 4rem;
+    background-color: #333232;
+    color: #d5cfe1;
+    z-index: 1;
+    }
+    
+    .Nav > h3 {
+        padding-left: 1rem;
+        width: 30%;
+    }
+    
+    .Nav > p {
+        padding-right: 1rem;
+        width: 37%;
+        text-align: center;
+    }

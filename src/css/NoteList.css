@@ -1,0 +1,90 @@
+.note-list{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+    
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30.33%;
+    min-height: 80vh;
+    background-color: #e4e4e4b0;
+    margin: 1.5rem 0.7rem;
+    border-radius: 14px;
+}
+    
+.column > h2{
+    text-transform: uppercase;
+}
+
+.delete-footer{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 4rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.delete-all-btn{
+    width: 4.7rem;
+    height: 2.7rem;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trash-text{
+    display: none;
+}
+
+.delete-all-btn:hover .trash-text{
+ display: inline-block;
+}
+
+.delete-all-btn:hover .trash-icon{
+ display: none;
+}
+
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    background-color: rgba(71, 61, 139, 0.322);
+}
+
+.overlay-enter {
+    opacity: 0;
+}
+
+.overlay-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.overlay-exit {
+    opacity: 1;
+}
+
+.overlay-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+@media screen and (max-width: 635px) {
+.column{
+    margin: 0.5rem 0.3rem;
+}
+
+.column > h2{
+    font-size: 1rem;
+}
+}
