@@ -1,155 +1,157 @@
 .add-note-container{
-    width: 100vw;
-    background-color: #e4e4e4;
-    position: relative;
+  width: 100vw;
+  position: relative;
+  background-color: rgb(255, 255, 255);
 }
 
 .chevron-icon{
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    font-size: 1.5rem;
-    cursor: pointer;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .add-note{
-    padding: 3rem 0;
-    background-color: #e4e4e4b0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding: 3rem 0;
+  background-color: #e4e4e4b0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .add-note input{
-    height: 1.7rem;
-    margin-right: 1rem;
-    -webkit-transition: .25s all ease;
-    -o-transition: .25s all ease;
-    transition: .25s all ease; 
+  height: 1.7rem;
+  margin-right: 1rem;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease; 
 }
 
 .add-note input:hover {
-    border-bottom: 2px solid #673AB7;
+  border-bottom: 2px solid #673AB7;
 }
 .add-note input:focus {
-    border-bottom: 2px solid #673AB7;
+  border-bottom: 2px solid #673AB7;
 }
 
 .add-note .task-info {
-    width: 13rem;
+  width: 13rem;
 }
 
 .add-btn{
-    width: 3.5rem;
-    height: 2rem;
-    margin: 1rem;
+  width: 3.5rem;
+  height: 2rem;
+  margin: 1rem;
 }
 
 select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    outline: 0;
-    box-shadow: none;
-    border: 0 !important;
-    background: #e4e4e4;
-    background-image: none;
-    flex: 1;
-    padding: 0 0.5rem;
-    margin: -0.2rem 0;
-    color: #000000;
-    cursor: pointer;
-    font-size: 1rem;
-  }
-  
-  select::-ms-expand {
-    display: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  font-family: inherit;
+  border: 0 !important;
+  background: #ffffff00;
+  background-image: none;
+  flex: 1;
+  padding: 0 0.5rem;
+  margin: -0.2rem 0;
+  color: #000000bb;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  width: 6rem;
+  height: 1.85rem;
+  line-height: 3;
+  background: transparent;
+  overflow: hidden;
+  border-bottom: 2px solid #D1C4E9;
+  font: inherit; 
+  letter-spacing: inherit;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease; 
+}
+
+.select::after {
+  color: #0000009f;
+  content: '\25BC';
+  position: absolute;
+  top: 0.4rem;
+  right: -0.2rem;
+  padding: 0 1rem;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+
+.select:hover::after {
+  color: #673AB7;
+}
+.select:focus {
+  border-bottom: 2px solid #673AB7;
+}
+.select:hover {
+  border-bottom: 2px solid #673AB7;
+}
+
+.default-option{
+    color: white !important;
+}
+
+.add-enter {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.add-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms;
+}
+.add-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.add-exit-active {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 500ms, transform 500ms;
+}
+
+@media screen and (max-width: 635px) {
+  .add-note{
+    flex-direction: column;
+    padding: 1rem;
   }
 
-  .select {
-    position: relative;
-    display: flex;
-    width: 6rem;
-    height: 1.85rem;
-    line-height: 3;
-    background: transparent;
-    overflow: hidden;
-    border-bottom: 2px solid #D1C4E9;
-    font: inherit; 
-    letter-spacing: inherit;
-    -webkit-transition: .25s all ease;
-    -o-transition: .25s all ease;
-    transition: .25s all ease; 
+  .add-note input{
+    width: 60vw;
+    padding-bottom: 0.5rem;
   }
 
-  .select::after {
-    content: '\25BC';
-    position: absolute;
-    top: 0.4rem;
-    right: 0;
-    padding: 0 1rem;
-    background: transparent;
-    cursor: pointer;
-    pointer-events: none;
-    -webkit-transition: .25s all ease;
-    -o-transition: .25s all ease;
-    transition: .25s all ease;
-  }
- 
-  .select:hover::after {
-    color: #673AB7;
-  }
-  .select:focus {
-    border-bottom: 2px solid #673AB7;
-  }
-  .select:hover {
-    border-bottom: 2px solid #673AB7;
+  .add-note .task-info {
+    width: 60vw;
   }
 
-  .default-option{
-      color: white !important;
+  .select{
+    width: 60vw;
+    padding-bottom: 0.5rem;
+    margin-left: -1rem;
   }
- 
-  .add-enter {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  .add-enter-active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 500ms, transform 500ms;
-  }
-  .add-exit {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .add-exit-active {
-    opacity: 0;
-    transform: translateY(-100%);
-    transition: opacity 500ms, transform 500ms;
-  }
-  
-  @media screen and (max-width: 635px) {
-    .add-note{
-      flex-direction: column;
-      padding: 1rem;
-    }
-
-    .add-note input{
-      width: 60vw;
-      padding-bottom: 0.5rem;
-    }
-
-    .add-note .task-info {
-      width: 60vw;
-    }
-
-    .select{
-      width: 60vw;
-      padding-bottom: 0.5rem;
-      margin-left: -1rem;
-    }
-  }
-     
+}
+   

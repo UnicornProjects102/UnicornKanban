@@ -10,7 +10,6 @@ import './css/App.css';
 function App() {
   const [showAdd, setShowAdd] = useState(true);
   const [showBtn, setShowBtn] = useState(false);
-
   return (
     <NoteProvider>
       <div className="App">

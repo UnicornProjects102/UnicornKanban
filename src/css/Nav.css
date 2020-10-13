@@ -20,3 +20,11 @@
         width: 37%;
         text-align: center;
     }
+
+    .tasks-number{
+        background-color: #998AD3;
+        padding: 0.2rem 0.4rem;
+        border-radius: 50%;
+        color: black;
+        font-weight: 800;
+    }

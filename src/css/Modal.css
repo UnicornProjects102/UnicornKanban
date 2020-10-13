@@ -27,12 +27,12 @@
     width: 4rem;
     height: 3rem;
     margin: 1rem;
-    opacity: 0.7;
+    opacity: 1;
     font-size: 1rem;
 }
 
 .Modal button:hover {
-    opacity: 1; 
+    background-color: #00000081; 
 }
 
 .btns{
@@ -40,11 +40,21 @@
 }
 
 .btn-yes{
-    background-color: #00c49a;
+    background-color: #B5EAD7;
+}
+
+.btn-yes > p{
+    color: black;
+    font-weight: 500;
 }
 
 .btn-no{
-    background-color: #f24236;
+    background-color: #FF9AA2;
+}
+
+.btn-no > p{
+    color: black;
+    font-weight: 500;
 }
 
 .modal-enter {

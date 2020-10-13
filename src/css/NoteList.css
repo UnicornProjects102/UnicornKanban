@@ -2,17 +2,24 @@
     display: flex;
     justify-content: center;
     width: 100vw;
+    height: 100vh;
+    background-image: url(../img/background.jpg);
+    background-position: center;
+    background-size: cover;
 }
     
 .column{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30.33%;
+    width: 33.33%;
     min-height: 80vh;
-    background-color: #e4e4e4b0;
-    margin: 1.5rem 0.7rem;
-    border-radius: 14px;
+    background-color: #18181834;
+    margin: 0rem 0rem;
+}
+
+.light{
+    background-color: #e4e4e41e; 
 }
     
 .column > h2{

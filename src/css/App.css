@@ -1,24 +1,28 @@
 .App{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-image: url(../img/background.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .content {
-  margin-top: 4rem;
+margin-top: 4rem;
 }
 
 .add-btn-main{
-    width: 4.7rem;
-    height: 2.7rem;
-    margin: 1rem 1rem;
-    position: fixed;
-    z-index: 2;
-    right: 0;
-    background-color: #424141;
-    top: -0.5rem;
+  width: 4.7rem;
+  height: 2.7rem;
+  margin: 1rem 1rem;
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  background-color: #424141;
+  top: -0.5rem;
 }
+
 
 
 
