@@ -31,7 +31,8 @@ const AddNote = ({ onClose }) => {
             info: { value: info },
             stage: stage,
             id: uuidv4(),
-            priority: `${priority === "" ? "normal" : priority}`
+            priority: `${priority === "" ? "normal" : priority}`,
+            sortingVal: `${priority === "high" ? "A" : priority === "normal" ? "B" : "C"}`
         }]);
         setTask('');
         setInfo('');

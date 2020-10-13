@@ -8,7 +8,6 @@ import './css/App.css';
 
 
 function App() {
-
   const [showAdd, setShowAdd] = useState(true);
   const [showBtn, setShowBtn] = useState(false);
 
@@ -29,6 +28,7 @@ function App() {
             onExited={() => setShowBtn(true)}>
             <AddNote onClose={() => setShowAdd(false)} />
           </CSSTransition>
+
           <NoteList />
         </div>
       </div>
