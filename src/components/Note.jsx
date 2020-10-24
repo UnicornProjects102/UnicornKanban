@@ -5,7 +5,7 @@ import "../css/Note.css";
 import NoteContent from './NoteContent';
 
 
-const Note = ({ task, info, stage, priority, id, index }) => {
+const Note = ({ task, info, priority, id, index }) => {
 
     const [notes, setNotes] = useContext(NoteContext)
 
@@ -31,15 +31,13 @@ const Note = ({ task, info, stage, priority, id, index }) => {
 
     const colorClassName = priority === "high" ? "red" : priority === "normal" ? "yellow" : "green";
 
-
-
     return (
         <Draggable draggableId={`${id}`} index={index} >
             {(provided, snapshot) => (
                 <div ref={provided.innerRef} className={`note ${colorClassName}`} {...provided.draggableProps} {...provided.dragHandleProps}
                 >
                     <NoteContent task={task} info={info} startEditTask={startEditTask} startEditInfo={startEditInfo} handleDelete={handleDelete}
-                        isDragging={snapshot.isDragging}
+                        isDragging={snapshot.isDragging} id={id}
                     />
                 </div>
             )

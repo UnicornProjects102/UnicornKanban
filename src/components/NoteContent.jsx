@@ -4,7 +4,7 @@ import Editable from "./Editable";
 class NoteContent extends Component {
 
     render() {
-        const { task, info, stage, priority, id, index, startEditTask, startEditInfo, handleDelete } = this.props;
+        const { task, info, id, startEditTask, startEditInfo, handleDelete } = this.props;
         return (
             <React.Fragment>
                 <Editable className="note-task" id={id} propName="task" value={task.value} editing={task.editing} onClick={startEditTask} />
