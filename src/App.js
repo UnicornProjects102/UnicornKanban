@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NoteProvider } from './NoteContext';
 import { CSSTransition } from 'react-transition-group';
 import NoteList from './components/NoteList';
+import NoteListMobile from './components/NoteListMobile';
 import Nav from './components/Nav';
 import AddNote from './components/AddNote';
 import './css/App.css';
@@ -27,8 +28,8 @@ function App() {
             onExited={() => setShowBtn(true)}>
             <AddNote onClose={() => setShowAdd(false)} />
           </CSSTransition>
+          {window.innerWidth <= 500 ? <NoteListMobile /> : <NoteList />}
 
-          <NoteList />
         </div>
       </div>
     </NoteProvider>
